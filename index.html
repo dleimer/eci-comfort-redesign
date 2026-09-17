@@ -135,8 +135,11 @@
   .btn-primary:hover{background:var(--orange-dark);}
   .btn-ghost{border-color:rgba(255,255,255,0.32);color:#fff;}
   .btn-ghost:hover{border-color:#fff;}
-  .hero-motif{position:relative;height:340px;}
-  .hero-motif svg{width:100%;height:100%;}
+  .hero-motif{position:relative;height:340px;display:flex;align-items:center;justify-content:center;}
+  .hero-motif video{
+    width:100%;height:100%;object-fit:contain;
+    mix-blend-mode:screen;
+  }
   .stat-strip{
     position:relative;margin-top:56px;
     display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
@@ -286,25 +289,10 @@
         <div><div class="num">1,260+</div><div class="label">Five-Star Reviews</div></div>
       </div>
     </div>
-    <div class="hero-motif" aria-hidden="true">
-      <svg viewBox="0 0 400 400" fill="none">
-        <g stroke="#f7941d" stroke-width="6" stroke-linecap="round">
-          <line x1="290" y1="60" x2="290" y2="20"/>
-          <line x1="330" y1="78" x2="362" y2="50"/>
-          <line x1="352" y1="115" x2="392" y2="105"/>
-          <line x1="330" y1="158" x2="362" y2="182"/>
-          <line x1="250" y1="78" x2="218" y2="50"/>
-          <line x1="228" y1="115" x2="188" y2="105"/>
-          <line x1="250" y1="158" x2="218" y2="182"/>
-        </g>
-        <circle cx="290" cy="118" r="46" fill="none" stroke="#f7941d" stroke-width="7"/>
-        <g stroke="#83c141" stroke-width="6" fill="none" opacity="0.9">
-          <path d="M 60 340 a 40 40 0 0 1 0 -80"/>
-          <path d="M 60 360 a 60 60 0 0 1 0 -120"/>
-          <path d="M 60 380 a 80 80 0 0 1 0 -160"/>
-        </g>
-        <line x1="120" y1="250" x2="300" y2="230" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.5"/>
-      </svg>
+    <div class="hero-motif">
+      <video autoplay muted loop playsinline poster="assets/video/ductless-poster.jpg" aria-label="Animated assembly of a ductless mini-split HVAC unit">
+        <source src="assets/video/ductless-assembly.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
